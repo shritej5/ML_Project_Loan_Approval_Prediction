@@ -1,0 +1,98 @@
+<html>
+<head>
+<title> Loan Approval Model</title>
+</head>
+
+
+<body bgcolor=52B2C0>
+<H1 align='center'><U> Loan Approval Prediction</U></h1>
+
+<h2 align='center'>Enter your details to know on the bases of Machine Learning Logistic Regression Model <br> whether you will be granted the loan or not.</h2><br>
+
+<form method="POST", action="{{ url_for('predict')}}">
+  <label>Gender:</label>	
+  <input type="radio" id="male" name="gender" value="1">
+  <label for="male">Male</label>
+  
+  <input type="radio" id="female" name="gender" value="2">
+  <label for="female">Female</label><br>
+ <br>
+
+
+
+ <label>Married:</label>	
+  <input type="radio" id="yes" name="married" value="1">
+  <label for="yes">Yes</label>
+  
+  <input type="radio" id="no" name="married" value="0">
+  <label for="no">No</label><br>
+  <br>
+
+
+  <label>Dependents:</label>	
+  <input type="radio" id="0" name="dependents" value="0">
+  <label for="1">0</label>
+
+  <input type="radio" id="1" name="dependents" value="1">
+  <label for="1">1</label>
+  
+  <input type="radio" id="2" name="dependents" value="2">
+  <label for="2">2</label>
+   
+  <input type="radio" id="3" name="dependents" value="3">
+  <label for="3"> 3</label><br>
+  <br>
+
+  
+ <label>Education:</label>	
+  <input type="radio" id="graduate" name="education" value="0">
+  <label for="graduate">Graduate</label>
+  
+  <input type="radio" id="not graduate" name="education" value="1">
+  <label for="not graduate">Not Graduate</label><br>
+   <br>
+
+  <label>Self Employed</label><br>	
+  <input type="radio" id="No" name="self_employed" value="0">
+  <label for="self_employed">No</label><br>
+  
+  <input type="radio" id="yes" name="self_employed" value="1">
+  <label for="self_employed">Yes</label><br>
+   <br>
+
+  <label for="applicantincome">Applicant Income :</label>
+  <input type="text" id="applicantincome" name="applicantincome"><br><br>
+
+  <label for="coapplicantincome"> Co Applicant Income :</label>
+  <input type="text" id="coapplicantincome" name="coapplicantincome"><br><br>
+
+  <label for="loanamount">Loan Amount:</label>
+  <input type="text" id="loanamount" name="loanamount"><br><br>
+  
+ <label for="loan_amount_term">Loan Amount Trem:</label>
+  <input type="text" id="loan_amount_term" name="loan_amount_term"><br><br>
+
+  <label>Credit History</label><br>	
+  <input type="radio" id="1" name="credit_history" value="1">
+  <label for="credit_history">0 (No)</label><br>
+  
+  <input type="radio" id="0" name="credit_history" value="0">
+  <label for="credit_history">1 (Yes)</label><br>
+   <br>
+   
+  <label>Property Area</label><br>	
+  <input type="radio" id="1" name="property_area" value="2">
+  <label for="property_area">Urban</label><br>
+  
+  <input type="radio" id="0" name="property_area" value="1">
+  <label for="property_area">Semiurban</label><br>
+
+ <input type="radio" id="0" name="property_area" value="0">
+  <label for="property_area">Rural</label><br>
+   <br>  
+
+<input type="submit" value="predict">
+</form>
+
+</body>
+</html>
